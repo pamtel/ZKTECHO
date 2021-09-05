@@ -67,7 +67,7 @@ export const ContainerWrapper = styled.div`
     height: 100vh;
     position: relative;
     margin-left: 268px;
-    // overflow-x: hidden;
+    overflow-x: hidden;
     .main-children {
       padding: 20px;
       .contain {
@@ -90,7 +90,7 @@ export const ContainerWrapper = styled.div`
       .right-nav {
         width: 294px;
         position: fixed;
-        right: 0px;
+        right: 19px;
         bottom: 0;
         background: #ffffff;
         box-shadow: 0px 0px 10px rgba(8, 37, 100, 0.09);
