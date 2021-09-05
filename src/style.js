@@ -13,7 +13,7 @@ export const ContainerWrapper = styled.div`
     position: sticky;
     width: 100%;
     .navbar {
-      padding: 20px;
+      padding: 20px 0 20px 20px;
       .input {
         width: 607px;
       }
@@ -67,7 +67,7 @@ export const ContainerWrapper = styled.div`
     height: 100vh;
     position: relative;
     margin-left: 268px;
-    overflow-x: hidden;
+    // overflow-x: hidden;
     .main-children {
       padding: 20px;
       .contain {
@@ -88,9 +88,9 @@ export const ContainerWrapper = styled.div`
         padding: 20px;
       }
       .right-nav {
-        width: 3003x;
+        width: 294px;
         position: fixed;
-        right: 25px;
+        right: 0px;
         bottom: 0;
         background: #ffffff;
         box-shadow: 0px 0px 10px rgba(8, 37, 100, 0.09);

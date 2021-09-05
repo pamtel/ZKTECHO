@@ -26,7 +26,7 @@ const Navbar = () => {
       />
       </div>
 
-      <div className="pr-2 w-72">
+      <div className="w-72">
         <div className="flex items-center">
           <Badge badgeContent={21} color="primary">
             <NotificationsIcon />
