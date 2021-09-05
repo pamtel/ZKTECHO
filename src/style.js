@@ -7,8 +7,8 @@ export const ContainerWrapper = styled.div`
   .header-container {
     top: 0;
     left: -5px;
-    background: #FFFFFF;
-    box-shadow: 0px 0px 17px rgba(8, 37, 100, 0.09);  
+    background: #ffffff;
+    box-shadow: 0px 0px 17px rgba(8, 37, 100, 0.09);
     height: 80px;
     z-index: 999999;
     position: sticky;
@@ -19,7 +19,7 @@ export const ContainerWrapper = styled.div`
         width: 607px;
       }
       .MuiBadge-colorPrimary {
-        background: #0DC671 !important;
+        background: #0dc671 !important;
       }
     }
   }
@@ -30,13 +30,13 @@ export const ContainerWrapper = styled.div`
     top: 0;
     left: 0;
     bottom: 0;
-    .sidebar-header{
-      background: #FFFFFF;
+    .sidebar-header {
+      background: #ffffff;
       box-shadow: 0px 0px 17px rgba(8, 37, 100, 0.09);
-    height: 80px;
-    z-index: 999999;
-    position: sticky;
-    padding: 25px 36px 0 36px;
+      height: 80px;
+      z-index: 999999;
+      position: sticky;
+      padding: 25px 36px 0 36px;
     }
     .sidebar-wrapper {
       width: 100%;
@@ -50,8 +50,11 @@ export const ContainerWrapper = styled.div`
       }
       .active {
         .MuiListItem-gutters {
-          background: #E5E5E5 !important;
+          background: #e5e5e5 !important;
           border-radius: 5px !important;
+        }
+        .zk-icon {
+          fill: #000000 !important;
         }
         .MuiTypography-body1 {
           color: #000 !important;
@@ -69,7 +72,7 @@ export const ContainerWrapper = styled.div`
     .main-children {
       padding: 20px;
       .contain {
-        background: #E6EEFF;
+        background: #e6eeff;
         border-radius: 10px;
         .content {
           padding: 20px;
@@ -77,26 +80,56 @@ export const ContainerWrapper = styled.div`
       }
     }
     .people-wrapper {
-      display: flex;
-      position: relative;
-      .contain {
-        width: calc(100% - 294px);
-        background: #E6EEFF;
-      border-radius: 10px;
+      margin-right: 293px;
       padding: 20px;
-      margin: 20px;
+      max-width: 100% !important;
+      .contain {
+        background: #e6eeff;
+        border-radius: 10px;
+        padding: 20px;
       }
       .right-nav {
-        width: 294px;
+        width: 3003x;
+        position: fixed;
         right: 0;
-        top: 0;
         bottom: 0;
-        background: red;
-        height: 200px;
+        background: #ffffff;
+        box-shadow: 0px 0px 10px rgba(8, 37, 100, 0.09);
+        height: calc(100vh - 80px);
+        z-index: 2;
+        padding: 20px;
+        .project-wrapper{
+          display: grid;
+          grid-template-columns: auto auto;
+          gap: 20px;
+          .project-content {
+            width: 110px;
+            background: #F7F6FB;
+            border-radius: 16px;
+          }
+        }
+        .chat-wrapper {
+          background: #F2F2F2;
+          border-radius: 4px;
+        }
       }
     }
-    .top-up {
-      background: '#005BFF';
-    }
   }
+  .chat-icon {
+    width: 40px;
+    height: 40px;
+    background: #005BFF;
+    border-radius: 8px;
+  }
+`
+export const StaffWrapper = styled.div`
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  grid-gap: 20px;
+  padding-top: 50px;
+ .card-wrapper {
+  width: 295px;
+  height: 305px;
+  box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.2);
+}
 `

@@ -8,3 +8,42 @@
   box-sizing: border-box;
   font-family: 'Nunito Sans', sans-serif !important;
 }
+
+/* common styles */
+.zk-icon{
+  fill: gray;
+}
+.gray {
+  color: #898CA6;
+}
+.dark-color {
+  color: #001233;
+}
+.light-gray {
+  color: #9B9B9B
+}
+.ash {
+  color: #888888;
+}
+
+.fontSize-twelve {
+  font-size: 12px !important;
+}
+.fontSize-thirteen {
+  font-size: 13px !important;
+}
+.fontSize-sixteen {
+  font-size: 16px !important;
+}
+.fontSize-eighteen {
+  font-size: 18px !important;
+}
+.fontSize-twentyfour {
+  font-size: 24px !important;
+}
+.fontSize-twentysix {
+  font-size: 26px !important;
+}
+.fontSize-thirtytwo {
+  font-size: 32px !important;
+}

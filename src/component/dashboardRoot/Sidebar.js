@@ -5,6 +5,14 @@ import ListItemIcon from "@material-ui/core/ListItemIcon";
 import ListItemText from "@material-ui/core/ListItemText";
 import Divider from "@material-ui/core/Divider";
 import { NavLink } from "react-router-dom";
+import { DashboardIcon } from "../Icons";
+import { PeopleIcon } from "../Icons";
+import { UserIcon } from "../Icons";
+import { TransactionIcon } from "../Icons";
+import { SettingsIcon } from "../Icons";
+import { LogoutIcon } from "../Icons";
+import { ArrowUpIcon } from "../Icons";
+import { KeyIcon } from "../Icons";
 
 const Sidebar = () => {
   return (
@@ -14,18 +22,18 @@ const Sidebar = () => {
       </div>
       <div className="sidebar-wrapper">
         <div className="flex pb-8">
-        <img src="/assests/avatar.svg" alt="icon" />
-        <div className="pl-3 pt-2">
-          <p className="font-black">Sarah Cody</p>
-          <p className="text-xs">sarah@gmail.com</p>
-        </div>
+          <img src="/assests/avatar.svg" alt="icon" />
+          <div className="pl-3 pt-2">
+            <p className="font-black fontSize-sixteen">Sarah Cody</p>
+            <p className="fontSize-twelve gray">sarah@gmail.com</p>
+          </div>
         </div>
         <div>
           <List component="nav" aria-label="main mailbox folders">
             <NavLink exact to="/" activeClassName="active">
               <ListItem button>
                 <ListItemIcon>
-                  <img src="/assests/dashboard.svg" alt="icon" />
+                  <DashboardIcon />
                 </ListItemIcon>
                 <ListItemText primary="Dashboard" />
               </ListItem>
@@ -33,7 +41,7 @@ const Sidebar = () => {
             <NavLink exact to="/people" activeClassName="active">
               <ListItem button>
                 <ListItemIcon>
-                  <img src="/assests/people.svg" alt="icon" />
+                  <PeopleIcon />
                 </ListItemIcon>
                 <ListItemText primary="People" />
               </ListItem>
@@ -41,7 +49,7 @@ const Sidebar = () => {
             <NavLink exact to="/user" activeClassName="active">
               <ListItem button>
                 <ListItemIcon>
-                  <img src="/assests/user.svg" alt="icon" />
+                  <UserIcon />
                 </ListItemIcon>
                 <ListItemText primary="User groups" />
               </ListItem>
@@ -49,7 +57,7 @@ const Sidebar = () => {
             <NavLink exact to="/transaction" activeClassName="active">
               <ListItem button>
                 <ListItemIcon>
-                  <img src="/assests/transaction.svg" alt="icon" />
+                  <TransactionIcon />
                 </ListItemIcon>
                 <ListItemText primary="Transactions" />
               </ListItem>
@@ -64,7 +72,7 @@ const Sidebar = () => {
             <NavLink exact to="/setting" activeClassName="active">
               <ListItem button>
                 <ListItemIcon>
-                  <img src="/assests/setting.svg" alt="icon" />
+                  <SettingsIcon />
                 </ListItemIcon>
                 <ListItemText primary="Settings" />
               </ListItem>
@@ -72,7 +80,7 @@ const Sidebar = () => {
             <NavLink exact to="/api" activeClassName="active">
               <ListItem button>
                 <ListItemIcon>
-                  <img src="/assests/api.svg" alt="icon" />
+                  <KeyIcon />
                 </ListItemIcon>
                 <ListItemText primary="API key" />
               </ListItem>
@@ -80,26 +88,18 @@ const Sidebar = () => {
             <NavLink exact to="/logout" activeClassName="active">
               <ListItem button>
                 <ListItemIcon>
-                  <img src="/assests/logout.svg" alt="icon" />
+                  <LogoutIcon />
                 </ListItemIcon>
                 <ListItemText primary="Logout" />
               </ListItem>
             </NavLink>
           </List>
-          <List
-            component="nav"
-            aria-label="secondary mailbox folders"
-            style={{ paddingTop: "25px" }}
-          >
-            <div className="top-up">
-              <ListItem button>
-                <ListItemIcon>
-                  <img src="/assests/arrowUp.svg" alt="icon" />
-                </ListItemIcon>
-                <ListItemText primary="Top Up" />
-              </ListItem>
-            </div>
-          </List>
+        </div>
+        <div className="mt-8 mr-4 arrowup bg-blue-600 p-2 rounded-md">
+          <div className="flex items-center cursor-pointer ">
+            <ArrowUpIcon />
+            <p className="pl-4 text-white ">Top Up</p>
+          </div>
         </div>
       </div>
     </div>
