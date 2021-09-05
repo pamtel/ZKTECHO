@@ -155,10 +155,19 @@ export const ContainerWrapper = styled.div`
   .text-tomato {
     color: #F42727 !important;
   }
+  .input-text {
+    background: #EFF2F6;
+    border: 1px solid #D8D8D8;
+    border-radius: 4px 0px 0px 4px;
+    padding: 7px 15px;
+  }
+  .search {
+    left: -9px;
+  }
 `
 export const StaffWrapper = styled.div`
   display: grid;
-  grid-template-columns: auto auto auto auto;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
   grid-gap: 20px;
   padding-top: 50px;
  .card-wrapper {
