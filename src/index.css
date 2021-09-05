@@ -16,14 +16,28 @@
 .gray {
   color: #898CA6;
 }
+.dark-gray {
+  color: #1E1E2F;
+}
+.dim-gray {
+  color: #626577;
+}
 .dark-color {
   color: #001233;
 }
+
 .light-gray {
   color: #9B9B9B
 }
 .ash {
   color: #888888;
+}
+.light-blue {
+  color: #9FA2B8;
+}
+
+.darkblue {
+  color: #003380;
 }
 
 .fontSize-twelve {
@@ -31,6 +45,9 @@
 }
 .fontSize-thirteen {
   font-size: 13px !important;
+}
+.fontSize-forteen {
+  font-size: 14px !important;
 }
 .fontSize-sixteen {
   font-size: 16px !important;

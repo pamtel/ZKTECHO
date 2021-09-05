@@ -1,6 +1,5 @@
 import styled from "styled-components";
 
-// Styled component named StyledButton
 export const ContainerWrapper = styled.div`
   max-width: 100%;
   overflow: hidden;
@@ -91,7 +90,7 @@ export const ContainerWrapper = styled.div`
       .right-nav {
         width: 3003x;
         position: fixed;
-        right: 0;
+        right: 25px;
         bottom: 0;
         background: #ffffff;
         box-shadow: 0px 0px 10px rgba(8, 37, 100, 0.09);
@@ -106,6 +105,23 @@ export const ContainerWrapper = styled.div`
             width: 110px;
             background: #F7F6FB;
             border-radius: 16px;
+            .price-icon {
+              border-left: 3px solid transparent;
+              line-height: 22px;
+              padding-left: 5px;
+            }
+            .price-icon.darkorange {
+              border-color: #E67A00;
+            }
+            .price-icon.royalblue {
+              border-color: #363ADE;
+            }
+            .price-icon.forestgreen {
+              border-color: #10A237;
+            }
+            .price-icon.tomato {
+              border-color: #FF5041;
+            }
           }
         }
         .chat-wrapper {
@@ -120,6 +136,24 @@ export const ContainerWrapper = styled.div`
     height: 40px;
     background: #005BFF;
     border-radius: 8px;
+  }
+  .MuiButton-label{
+    text-transform: capitalize;
+    color: #0091FF;
+    font-size: 16px;
+  }
+  .activePeople p{
+    color: #0052CE;
+    border-bottom: 3px solid #0052CE;
+  }
+  .text-royalblue {
+    color: #7378F3 !important;
+  }
+  .text-forestgreen {
+    color: #0DD480!important;
+  }
+  .text-tomato {
+    color: #F42727 !important;
   }
 `
 export const StaffWrapper = styled.div`

@@ -16,10 +16,10 @@ function App() {
         <Route path="/" exact component={Dashboard} />
         <Route path="/people" component={People} />
         <Route path="/user" component={User} />
-        <Route path="/transaction" exact component={Transaction} />
-        <Route path="/setting" exact component={Setting} />
-        <Route path="/api" exact component={Api} />
-        <Route path="/logout" exact component={Logout} />
+        <Route path="/transaction" component={Transaction} />
+        <Route path="/setting"component={Setting} />
+        <Route path="/api" component={Api} />
+        <Route path="/logout" component={Logout} />
       </Switch>
     </DashboardRoot>
   );

@@ -1,103 +1,165 @@
 import * as React from "react";
-import { makeStyles } from "@material-ui/core/styles";
 import Table from "@material-ui/core/Table";
 import TableBody from "@material-ui/core/TableBody";
+import TableRow from "@material-ui/core/TableRow";
 import TableCell from "@material-ui/core/TableCell";
 import TableContainer from "@material-ui/core/TableContainer";
 import TableHead from "@material-ui/core/TableHead";
-import TableRow from "@material-ui/core/TableRow";
 import Paper from "@material-ui/core/Paper";
-import { DashboardIcon } from "../Icons";
+import { TableIcon } from "../Icons";
+import Button from "@material-ui/core/Button";
+import Divider from "@material-ui/core/Divider";
+import ArrowForwardIosIcon from "@material-ui/icons/ArrowForwardIos";
 
-const useStyles = makeStyles({
-  table: {
-    minWidth: 650,
+const TableData = [
+  {
+    date: "28/08/20",
+    referenceID: "11232346322",
+    beneficiaryName: "Sarah Bright",
+    beneficiaryBank: "GTB-0229345434",
+    remarks: "Laundry",
+    amount: "10,000",
+    status: "Pending",
   },
-});
-
-function createData(name, calories, fat, carbs, protein) {
-  return { name, calories, fat, carbs, protein };
-}
-
-const rows = [
-  createData("Frozen yoghurt", 159, 6.0, 24, 4.0),
-  createData("Ice cream sandwich", 237, 9.0, 37, 4.3),
-  createData("Eclair", 262, 16.0, 24, 6.0),
-  createData("Cupcake", 305, 3.7, 67, 4.3),
-  createData("Gingerbread", 356, 16.0, 49, 3.9),
+  {
+    date: "28/08/20",
+    referenceID: "11232346322",
+    beneficiaryName: "Floyd Miles",
+    beneficiaryBank: "GTB-0229345434",
+    remarks: "Airtime",
+    amount: "10,000",
+    status: "Completed",
+  },
+  {
+    date: "28/08/20",
+    referenceID: "11232346322",
+    beneficiaryName: "Sarah Nguyen",
+    beneficiaryBank: "GTB-0229345434",
+    remarks: "Laundry",
+    amount: "10,000",
+    status: "Failed",
+  },
+  {
+    date: "28/08/20",
+    referenceID: "11232346322",
+    beneficiaryName: "Esther Howard",
+    beneficiaryBank: "GTB-0229345434",
+    remarks: "",
+    amount: "10,000",
+    status: "Pending",
+  },
+  {
+    date: "28/08/20",
+    referenceID: "11232346322",
+    beneficiaryName: "Jenny Wilson",
+    beneficiaryBank: "GTB-0229345434",
+    remarks: "Refund for...",
+    amount: "10,000",
+    status: "Completed",
+  },
 ];
 
 const DashboardTable = () => {
-  const classes = useStyles();
-  // const columnsss = [
-  //   { field: "id", headerName: "ID", width: 90 },
-  //   {
-  //     field: "firstName",
-  //     headerName: "First name",
-  //     width: 150,
-  //     editable: true,
-  //   },
-  //   {
-  //     field: "lastName",
-  //     headerName: "Last name",
-  //     width: 150,
-  //     editable: true,
-  //   },
-  //   {
-  //     field: "age",
-  //     headerName: "Age",
-  //     type: "number",
-  //     width: 110,
-  //     editable: true,
-  //   },
-  //   {
-  //     field: "fullName",
-  //     headerName: "Full name",
-  //     description: "This column has a value getter and is not sortable.",
-  //     sortable: false,
-  //     width: 160,
-  //     valueGetter: (params) =>
-  //       `${params.getValue(params.id, "firstName") || ""} ${
-  //         params.getValue(params.id, "lastName") || ""
-  //       }`,
-  //   },
-  // ];
-
   return (
-    <div className="p-8">
- 
-        <TableContainer component={Paper}>
-          <Table className={classes.table} aria-label="simple table">
+    <div>
+      <TableContainer component={Paper}>
+        <div className="p-10">
+          <div className="flex justify-between items-center pb-3">
+            <p className="fontSize-eighteen dark-gray font-bold">
+              My transactions
+            </p>
+            <Button endIcon={<ArrowForwardIosIcon />} color="primary">
+              See all
+            </Button>
+          </div>
+          <Divider />
+          <Table>
             <TableHead>
-              <TableRow>
-                <TableCell></TableCell>
-                <TableCell>Dessert (100g serving)</TableCell>
-                <TableCell align="right">Calories</TableCell>
-                <TableCell align="right">Fat&nbsp;(g)</TableCell>
-                <TableCell align="right">Carbs&nbsp;(g)</TableCell>
-                <TableCell align="right">Protein&nbsp;(g)</TableCell>
-              </TableRow>
+              <TableCell></TableCell>
+              <TableCell>
+                <span className="fontSize-sixteen font-bold dim-gray">
+                  Date
+                </span>
+              </TableCell>
+              <TableCell>
+                <span className="fontSize-sixteen font-bold dim-gray">
+                  ReferenceID
+                </span>
+              </TableCell>
+              <TableCell>
+                <span className="fontSize-sixteen font-bold dim-gray">
+                  Beneficiary
+                </span>
+              </TableCell>
+              <TableCell>
+                <span className="fontSize-sixteen font-bold dim-gray">
+                  Remarks
+                </span>
+              </TableCell>
+              <TableCell>
+                <span className="fontSize-sixteen font-bold dim-gray">
+                  Amount
+                </span>
+              </TableCell>
+              <TableCell>
+                <span className="fontSize-sixteen font-bold dim-gray">
+                  Status
+                </span>
+              </TableCell>
             </TableHead>
             <TableBody>
-              {rows.map((row) => (
-                <TableRow key={row.name}>
-                  <TableCell component="th" scope="row">
-                    <DashboardIcon />
+              {TableData.map((row, index) => (
+                <TableRow>
+                  <TableCell key={index}>
+                    <TableIcon />
                   </TableCell>
-                  <TableCell component="th" scope="row">
-                    {row.name}
+                  <TableCell>
+                    <span className="fontSize-sixteen font-bold light-blue">
+                      {row.date}
+                    </span>
                   </TableCell>
-                  <TableCell align="right">{row.calories}</TableCell>
-                  <TableCell align="right">{row.fat}</TableCell>
-                  <TableCell align="right">{row.carbs}</TableCell>
-                  <TableCell align="right">{row.protein}</TableCell>
-                  <TableCell align="right">{row.protein}</TableCell>
+                  <TableCell>
+                    <span className="fontSize-sixteen darkblue font-bold">
+                      {row.referenceID}
+                    </span>
+                  </TableCell>
+                  <TableCell>
+                    <p className="fontSize-sixteen font-bold light-blue pb-2">
+                      {row.beneficiaryName}
+                    </p>
+                    <p className="fontSize-forteen light-blue">
+                      {row.beneficiaryBank}
+                    </p>
+                  </TableCell>
+                  <TableCell>
+                    <span className="fontSize-sixteen light-blue ">
+                      {row.remarks}
+                    </span>
+                  </TableCell>
+                  <TableCell>
+                    <span className="fontSize-sixteen font-bold light-blue">
+                      {row.amount}
+                    </span>
+                  </TableCell>
+                  <TableCell>
+                    <span
+                      className={`${
+                        row.status === "Pending"
+                          ? "text-royalblue"
+                          : row.status === "Completed" ? "text-forestgreen"
+                          : row.status === "Failed" ? "text-tomato"
+                          : ""
+                      } font-bold fontSize-sixteen`}
+                    >
+                      {row.status}
+                    </span>
+                  </TableCell>
                 </TableRow>
               ))}
             </TableBody>
           </Table>
-        </TableContainer>
-
+        </div>
+      </TableContainer>
     </div>
   );
 };
